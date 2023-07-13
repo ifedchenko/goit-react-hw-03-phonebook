@@ -76,12 +76,12 @@ export class App extends Component {
           <Section title={'Contacts'}>
             <Filter text={this.state.filter} onChange={this.onFilterChange} />
             <Contact
-              // contacts={
-              //   this.state.filter === ''
-              //     ? this.state.contacts
-              //     : this.onActiveFilter()
-              // }
-              contacts={this.state.contacts}
+              contacts={
+                this.state.filter === ''
+                  ? this.state.contacts
+                  : this.onActiveFilter()
+              }
+              // contacts={this.state.contacts}
               deleteContact={this.deleteContact}
             ></Contact>
           </Section>
